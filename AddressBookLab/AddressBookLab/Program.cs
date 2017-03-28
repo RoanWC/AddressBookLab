@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AddressBookGUI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace AddressBookLab
             //delete();
             //change();
             //addContact();
+            displayGUI();
         }
         public static void addContact()
         {
@@ -41,6 +43,10 @@ namespace AddressBookLab
                 db.Addresses.Add(a);
                 db.SaveChanges();
             }
+        }
+        public static void displayGUI()
+        {
+            MainWindow ab = new MainWindow();
         }
         public static void change()
         {
@@ -85,7 +91,7 @@ namespace AddressBookLab
                 db.SaveChanges();
                 }
         }
-        public static void tui()
+       /* public static void tui()
         {
             Console.Write("what would you like to do?");
             string choice = Console.ReadLine();
@@ -94,7 +100,7 @@ namespace AddressBookLab
                 case "add":
                 
             }
-        }
+        }*/
 
 
     }
